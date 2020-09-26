@@ -1,0 +1,121 @@
+table {
+  font-family: Arial,sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+
+  padding: 0px;
+  border-spacing: 0px;
+  margin: 0px auto 10px auto;
+  border-collapse: collapse;
+
+  border: 4px solid #666;
+
+}
+thead {
+  font-weight: bold;
+}
+td {
+  border: 1px solid grey;
+  padding: 0px 5px 0px 5px;
+}
+body {
+/* sorry about this scrollbar that's sometimes useless, but
+   otherwise internal content jumps when scrollbar appears */
+  overflow-y: scroll;
+}
+
+.recipelist td {
+
+  width: 11.111%;
+/*
+  width: 10%;
+*/
+}
+
+.force_align_left td {
+  text-align: left;
+}
+#all_list {
+  width: 100%;
+}
+.bold_horz_border {
+
+  border-top:    4px solid #666;
+}
+.bold_vert_border {
+  border-right: 4px solid #666;
+}
+.darken_bg {
+  background-color: #eee;
+}
+.bg_on_hover:hover {
+  background-color: #ddd;
+}
+.finger:hover {
+  cursor: pointer;
+}
+
+.float_left {
+  float: left;
+}
+.float_right {
+  float: right;
+}
+
+.rarity2 { background-color: #DDDDDD; }
+.rarity3 { background-color: #6BDFCE; }
+.rarity4 { background-color: #D6E35A; }
+.rarity5 { background-color: #FFCD4A; }
+.rarity1 { background-color: #DFB6FF; }
+.rarity6 { background-image: linear-gradient(rgba(255,102,34,0.5), rgba(119,153,238,0.5)); }
+
+.class_battle   { background-color: rgba(255,102, 34,0.5); }
+.class_strategy { background-color: rgba(119,153,238,0.5); }
+
+.sup {
+  vertical-align: super;
+  font-size: 10px;
+}
+.zero-opacity {
+  opacity: 0;
+}
+/*
+.partial-opacity:hover {
+  opacity: 0.5;
+}
+*/
+.zero-margin-padding {
+  margin: 0px;
+  padding: 0px;
+}
+.padlr {
+  padding: 0px 5px 0px 5px;
+}
+
+.red_bg   { background-color:#FFCCCC; }
+.green_bg { background-color:#CCFFCC; }
+.blue_bg  { background-color:#CCCCFF; }
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/*
+canvas {
+  border: 1px solid red;
+  width : 100%;
+  height: 100%;
+}
+*/
+.fixed {
+  position: fixed;
+  color: red;
+  border: 4px solid darkgrey;
+  margin: 0px;
+  padding: 3px;
+  font-weight: bold;
+}

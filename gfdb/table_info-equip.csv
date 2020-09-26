@@ -1,0 +1,73 @@
+id,craft time,class,*,name
+
+1,0:05,opt,2,BM 3-12X40
+2,0:20,opt,3,LRA 2-12x50
+3,0:35,opt,4,PSO-1
+4,0:45,opt,5,VFL 6-24x56
+
+5,0:08,holo,2,EOT 506
+6,0:23,holo,3,EOT 512
+7,0:38,holo,4,EOT 516
+8,0:48,holo,5,EOT 518
+
+9,0:10,rds,2,AMP COMPM2
+10,0:25,rds,3,AMP COMPM4
+11,0:40,rds,4,COG M150
+12,0:50,rds,5,ITI Mars
+
+13,0:09,nv,2,PEQ-2
+14,0:24,nv,3,PEQ-5
+15,0:39,nv,4,PEQ-15
+16,0:49,nv,5,PEQ-16A
+
+17,0:15,ap,2,M61
+18,0:30,ap,3,M993
+19,0:45,ap,4,Mk169
+20,0:55,ap,5,Mk211
+
+29,0:18,hv,2,FMJ
+30,0:33,hv,3,JSP
+31,0:48,hv,4,JHP
+32,0:58,hv,5,APCR
+
+37,0:12,t-exo,2,IOP T1
+38,0:27,t-exo,3,IOP T2
+39,0:42,t-exo,4,IOP T3
+40,0:52,t-exo,5,IOP T4
+
+42,0:26,armor,3,Type 1
+43,0:41,armor,4,Type 2
+44,0:51,armor,5,Type 3
+
+55,0:12,x-exo,2,IOP X1
+56,0:27,x-exo,3,IOP X2
+57,0:42,x-exo,4,IOP X3
+58,0:52,x-exo,5,IOP X4
+
+63,0:07,supp,2,AC1
+64,0:22,supp,3,AC2
+65,0:37,supp,4,AC3
+66,0:47,supp,5,AC4
+
+67,0:47,box,4,IOP High-Capacity
+68,0:57,box,5,IOP Extreme
+
+69,0:13,hp,2,ILM HP
+70,0:28,hp,3,ILM HP
+71,0:43,hp,4,ILM HP
+72,0:53,hp,5,ILM HP
+
+73,0:14,buck,2,#1
+74,0:29,buck,3,#0
+75,0:44,buck,4,#00
+76,0:54,buck,5,#000
+
+77,0:14,slug,2,BK
+78,0:29,slug,3,FST
+79,0:44,slug,4,WAD
+80,0:54,slug,5,SABOT
+
+87,0:16,cape,2,Ragged
+88,0:31,cape,3,Camouflage
+89,0:46,cape,4,Urban Camo
+90,0:56,cape,5,Thermoptic Camo
