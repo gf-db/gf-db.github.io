@@ -614,7 +614,7 @@ async function navigate_noadd_history(o) {
   let warn_div = document.createElement('div');
   warn_div.innerHTML = '<b>UPDATES ARE PAUSED for 1-3 days</b><br>pending addition of IOP special orders';
   css_class_add(warn_div, css_class_fixed);
-  fragment.appendChild( warn_div );
+  //fragment.appendChild( warn_div );  // orders are done, hide the notice
 
   // BIG TODO: recipes and epoch selectors should take table type(gun/equ), not item type(tdoll/equip/fairy)
   switch (o[type_str]) {
