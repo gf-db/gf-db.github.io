@@ -612,9 +612,9 @@ async function navigate_noadd_history(o) {
   let sec = msec_to_sec(fix_date - break_date);
   let days = ~~(sec/secs_in_day);
   let warn_div = document.createElement('div');
-  warn_div.innerHTML = '<b>UPDATES ARE PAUSED for 1-3 days</b><br>pending addition of IOP special orders';
-  css_class_add(warn_div, css_class_fixed);
-  //fragment.appendChild( warn_div );  // orders are done, hide the notice
+  warn_div.innerHTML = '<b>Check this new <a href="../charts/charts.html">CHARTS</a> option.</b><br>More will be added soon (maybe).';
+  css_class_add(warn_div, [css_class_fixed, "green"]);
+  fragment.appendChild( warn_div );  // announce the charts
 
   // BIG TODO: recipes and epoch selectors should take table type(gun/equ), not item type(tdoll/equip/fairy)
   switch (o[type_str]) {

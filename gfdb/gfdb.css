@@ -113,9 +113,14 @@ canvas {
 */
 .fixed {
   position: fixed;
-  color: red;
   border: 4px solid darkgrey;
   margin: 0px;
   padding: 3px;
   font-weight: bold;
+}
+.red {
+  color: red;
+}
+.green {
+  color: darkgreen;
 }
