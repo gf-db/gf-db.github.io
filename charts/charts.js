@@ -13,14 +13,14 @@ async function init() {
       const chart = document.getElementById('myChart1');
       chart.parentElement.removeChild(chart);
       const chart_list = [  // todo: load from external list file?
-        {name: "Distinct UserID", data: "distinct_userid"},
+        {name: "Distinct users (daily)", data: "distinct_userid"},
       ];
       for (const piece of chart_list) {
         let el = document.createElement('a');
         el.text = piece.name;
         el.href = document.location + "?" + datakey + "=" + piece.data;  // TODO: find correct and elegant way for this
-        document.body.appendChild(document.createElement('br'));
         document.body.appendChild(el);
+        document.body.appendChild(document.createElement('br'));
       }
     }
   } catch (e) {
