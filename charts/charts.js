@@ -2,24 +2,29 @@
 
 const fetch_options = { cache: "no-cache" };  // force-validate if the data we're getting is sufficiently new
 const datakey = "data";
+const daily_filter = { type: "mask", indices: [110,264,382,401,402,507,586] };
 
 async function init() {
   try {
-    let search_params = new URLSearchParams(document.location.search)
+    const search_params = new URLSearchParams(document.location.search);
     if (search_params.has(datakey)) {
-      let jfname = search_params.get(datakey);
-      new femtochart(document.getElementById('myChart1'), JSON.parse(await read_json('./data/' + jfname + '.json') ));
+      let json = await read_json('./data/' + search_params.get(datakey) + '.json');
+      if (json["time_step"] == 86400) {  // todo: where to put this?
+        json["filter"] = daily_filter;
+      }
+      const chart_element = document.body.appendChild(document.createElement('canvas'));
+      new femtochart(chart_element, json);
     } else {
-      const chart = document.getElementById('myChart1');
-      chart.parentElement.removeChild(chart);
-      const chart_list = [  // todo: load from external list file?
-        {name: "Distinct users (daily)", data: "distinct_userid"},
-      ];
-      for (const piece of chart_list) {
-        let el = document.createElement('a');
-        el.text = piece.name;
-        el.href = document.location + "?" + datakey + "=" + piece.data;  // TODO: find correct and elegant way for this
-        document.body.appendChild(el);
+      const chart_list = await read_json('chart_list.json');
+      for (const sublist of chart_list) {
+        for (const piece of sublist) {
+          if (piece.name === undefined || piece.data === undefined) { continue; }
+          let el = document.createElement('a');
+          el.text = piece.name;
+          el.href = document.location + "?" + datakey + "=" + piece.data;  // TODO: find correct and elegant way for this
+          document.body.appendChild(el);
+          document.body.appendChild(document.createElement('br'));
+        }
         document.body.appendChild(document.createElement('br'));
       }
     }
@@ -32,5 +37,5 @@ async function init() {
 async function read_json(filename) {
   let [file_data] = await Promise.all( [ fetch(filename, fetch_options) ] );
   let [file_text] = await Promise.all( [ file_data.text() ] );
-  return file_text;
+  return JSON.parse(file_text);
 }
