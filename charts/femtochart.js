@@ -53,18 +53,17 @@ class femtochart {
     this.canvas = arguments[0];
     this.opt    = arguments[1];
 
-    this.init();
-    this.draw_axes();
-    this.draw_ticks();
-    this.draw_grid();
-    this.draw_labels();
-    this.draw_charts();
+    const ctx = this.canvas.getContext('2d');
+    this.init(ctx);
+    this.draw_axes(ctx);
+    this.draw_ticks(ctx);
+    this.draw_grid(ctx);
+    this.draw_labels(ctx);
+    this.draw_charts(ctx);
   }
 
 // ----------------------------------------------------------------------------
-  init() {
-    this.ctx = this.canvas.getContext('2d');
-
+  init(ctx) {
     this.pixel_width = 2;  // TODO: maybe let user set instead?
     this.canvas.height = vh * 0.48;  // TODO: fill most of the screen?
     this.canvas.width = this.opt.data.length * this.pixel_width + offset_left + offset_right;  // this is non-negotiable, sorry
@@ -72,17 +71,17 @@ class femtochart {
     this.pixel_height = (this.canvas.height - offset_up - offset_down)/(htick_size * major_count);
 
     // draw background here because it looks simpler before the context transform
-    this.ctx.fillStyle = style_background;
-    this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+    ctx.fillStyle = style_background;
+    ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
     // flip the canvas upside down to normal x-y axes orientation and offset by 0.5 to avoid antialias on integer values
-    this.ctx.setTransform(1, 0, 0, -1, aa_shift, this.canvas.height - aa_shift);  // horz scale, horz skew, vert skew, vert scale, horz move, vert move
-    this.ctx.translate(offset_left, offset_down);
-    this.ctx.textAlign = 'center';
+    ctx.setTransform(1, 0, 0, -1, aa_shift, this.canvas.height - aa_shift);  // horz scale, horz skew, vert skew, vert scale, horz move, vert move
+    ctx.translate(offset_left, offset_down);
+    ctx.textAlign = 'center';
 
     // set line dash offset to avoid antialias on dash line ends too
-    this.ctx.lineDashOffset = aa_shift;
-    //this.ctx.setLineDash([3, 3]);
+    ctx.lineDashOffset = aa_shift;
+    //ctx.setLineDash([3, 3]);
 
     // calc width and height of inner chart area
     this.w = this.canvas.width - offset_left - offset_right;
@@ -222,9 +221,7 @@ class femtochart {
   }
 
 // ============================================================================
-  draw_axes() {
-    const ctx = this.ctx;
-
+  draw_axes(ctx) {
     ctx.strokeStyle = style_axis;
     ctx.beginPath();
     ctx.moveTo(this.w, 0);
@@ -234,50 +231,43 @@ class femtochart {
   }
 
 // ----------------------------------------------------------------------------
-  draw_ticks() {
-    const ctx = this.ctx;
-
+  draw_ticks(ctx) {
     ctx.strokeStyle = style_tick;
     ctx.beginPath();
-    this.draw_line_helper(this.vert_major_ticks, -major_length, true);
-    this.draw_line_helper(this.vert_minor_ticks,  minor_length, true);
-    this.draw_line_helper(this.horz_major_ticks, -major_length, false);
-    this.draw_line_helper(this.horz_minor_ticks,  minor_length, false);
+    this.draw_line_helper(ctx, this.vert_major_ticks, -major_length, true);
+    this.draw_line_helper(ctx, this.vert_minor_ticks,  minor_length, true);
+    this.draw_line_helper(ctx, this.horz_major_ticks, -major_length, false);
+    this.draw_line_helper(ctx, this.horz_minor_ticks,  minor_length, false);
     ctx.stroke();
   }
 
 // ----------------------------------------------------------------------------
-  draw_grid() {
-    const ctx = this.ctx;
-
+  draw_grid(ctx) {
     ctx.strokeStyle = style_major_gridline;
     ctx.beginPath();
-    this.draw_line_helper(this.vert_major_ticks, this.w, true);
-    this.draw_line_helper(this.horz_major_ticks, this.h, false);
+    this.draw_line_helper(ctx, this.vert_major_ticks, this.w, true);
+    this.draw_line_helper(ctx, this.horz_major_ticks, this.h, false);
     ctx.stroke();
 
     ctx.strokeStyle = style_minor_gridline;
     ctx.beginPath();
-    this.draw_line_helper(this.vert_minor_ticks, this.w, true);
-    this.draw_line_helper(this.horz_minor_ticks, this.h, false);
+    this.draw_line_helper(ctx, this.vert_minor_ticks, this.w, true);
+    this.draw_line_helper(ctx, this.horz_minor_ticks, this.h, false);
     ctx.stroke();
   }
 
 // ----------------------------------------------------------------------------
-  draw_labels() {
-    const ctx = this.ctx;
-
+  draw_labels(ctx) {
     ctx.save();
     ctx.scale(1, -1);  // invert the text back after we inverted canvas once for coordinates
     ctx.fillStyle = style_text;
-    this.draw_text_helper(this.vert_major_ticks, this.format_vert_label, true,  vtext_offsets);
-    this.draw_text_helper(this.horz_major_ticks, this.format_horz_label, false, htext_offsets);
+    this.draw_text_helper(ctx, this.vert_major_ticks, this.format_vert_label, true,  vtext_offsets);
+    this.draw_text_helper(ctx, this.horz_major_ticks, this.format_horz_label, false, htext_offsets);
     ctx.restore();
   }
 
 // ----------------------------------------------------------------------------
-  draw_charts() {
-    const ctx = this.ctx;
+  draw_charts(ctx) {
     const len = this.opt.data.length;
     const hscale = this.pixel_width;
     const vscale = this.pixel_height;
@@ -315,26 +305,26 @@ class femtochart {
   }
 
 // ----------------------------------------------------------------------------
-  draw_line_helper(array, line_length, is_vert) {
+  draw_line_helper(ctx, array, line_length, is_vert) {
     const pixel_size = (is_vert ? this.pixel_height : this.pixel_width);
 
     for (const value of array) {
       const d = Math.round(value * pixel_size);
       const move_pair = [d, 0];
       const line_pair = [d, line_length];
-      this.ctx.moveTo(move_pair[+is_vert], move_pair[+!is_vert]);
-      this.ctx.lineTo(line_pair[+is_vert], line_pair[+!is_vert]);
+      ctx.moveTo(move_pair[+is_vert], move_pair[+!is_vert]);
+      ctx.lineTo(line_pair[+is_vert], line_pair[+!is_vert]);
     }
   }
 
 // ----------------------------------------------------------------------------
-  draw_text_helper(array, fmt_func, is_vert, offsets) {
+  draw_text_helper(ctx, array, fmt_func, is_vert, offsets) {
     const pixel_size = (is_vert ? this.pixel_height : this.pixel_width);
 
     for (const value of array) {
       const d = Math.round(value * pixel_size);
       const xy_pair = [d, 0];
-      this.ctx.fillText(fmt_func.call(this, value), (xy_pair[+is_vert] + offsets[0]), -(xy_pair[+!is_vert] + offsets[1]));  // minus sign because of scale inversion in caller context; todo fix?
+      ctx.fillText(fmt_func.call(this, value), (xy_pair[+is_vert] + offsets[0]), -(xy_pair[+!is_vert] + offsets[1]));  // minus sign because of scale inversion in caller context; todo fix?
     }
   }
 

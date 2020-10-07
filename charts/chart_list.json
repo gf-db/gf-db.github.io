@@ -1,6 +1,54 @@
 [
   [
-    {"name": "Distinct users"               , "data": "distinct_userid"},
+    {"name": "Logged in users (daily)"      , "data": "distinct_userid"},
+    {"name": "Registered users (cumulative)", "data": "max_userid"},
+    {"name": "Registered users (daily)"     , "data": "max_userid_delta"},
+    {}
+  ], [
+    {"name": "Doll+heavy crafts [total]"    , "data": "gun_total_crafts"},
+    {"name": "Doll+heavy crafts [captured]" , "data": "gun_crafts"},
+    {"name": "Normal crafts [captured]", "data": "gun_light_crafts"},
+    {"name": "Heavy crafts [captured]" , "data": "gun_heavy_crafts"},
+    {}
+  ], [
+    {"name": "Equip+fairy crafts [total]"   , "data": "equ_total_crafts"},
+    {"name": "Equip+fairy crafts [captured]", "data": "equ_crafts"},
+    {"name": "Equip crafts [captured]" , "data": "equ_light_crafts"},
+    {"name": "Fairy crafts [captured]" , "data": "equ_heavy_crafts"},
+    {}
+  ], [
+    {"name": "Recipe  130-130-130-130"      , "data": "recipe_7"},
+    {"name": "Recipe  30-30-30-30"          , "data": "recipe_8"},
+    {"name": "Recipe  130-130-130-30"       , "data": "recipe_28"},
+    {"name": "Recipe  140-140-140-140"      , "data": "recipe_1010"},
+    {}
+  ], [
+    {"name": "Recipe  400-400-91-30"        , "data": "recipe_9"},
+    {"name": "Recipe  400-400-100-200"      , "data": "recipe_1061"},
+    {}
+  ], [
+    {"name": "Recipe  97-404-404-97"        , "data": "recipe_5"},
+    {"name": "Recipe  91-400-400-30"        , "data": "recipe_79"},
+    {"name": "Recipe  100-400-400-200"      , "data": "recipe_22870"},
+    {}
+  ], [
+    {"name": "Recipe  400-91-400-30"        , "data": "recipe_52"},
+    {"name": "Recipe  400-100-400-200"      , "data": "recipe_23575"},
+    {}
+  ], [
+    {"name": "Recipe  730-630-130-430"      , "data": "recipe_31"},
+    {"name": "Recipe  600-600-100-400"      , "data": "recipe_60"},
+    {"name": "Recipe  800-800-100-400"      , "data": "recipe_11692"},
+    {}
+  ], [
+    {"name": "Recipe  999-999-999-999"      , "data": "recipe_10"},
+    {"name": "Recipe  430-430-430-230"      , "data": "recipe_33"},
+    {"name": "Recipe  400-400-400-200"      , "data": "recipe_128"},
+    {}
+  ], [
+    {"name": "Recipe  6000-2000-6000-4000-1", "data": "recipe_44"},
+    {"name": "Recipe  1000-1000-1000-1000-1", "data": "recipe_64"},
+    {"name": "Recipe  8000-1000-8000-4000-1", "data": "recipe_151836"},
     {}
   ]
 ]

@@ -29,7 +29,10 @@ async function init() {
       }
     }
   } catch (e) {
-    let error = "Something broke ;(. Error message: " + e.message;
+    const loc = document.location;
+    const source_page = loc.protocol + "//" + loc.host + loc.pathname;
+    let error = "Something broke ;(. Error message: " + e.message + "<br>" +
+                "Try opening the <a href='" + source_page + "'>main charts page</a> instead?";
     document.body.innerHTML = error;
   }
 }
