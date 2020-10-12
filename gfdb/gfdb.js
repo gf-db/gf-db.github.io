@@ -612,7 +612,7 @@ async function navigate_noadd_history(o) {
   let sec = msec_to_sec(fix_date - break_date);
   let days = ~~(sec/secs_in_day);
   let warn_div = document.createElement('div');
-  warn_div.innerHTML = '<b>Check this new <a href="../charts/charts.html">CHARTS</a> option.</b><br>More will be added soon (maybe).';
+  warn_div.innerHTML = '<b>Check this new <a href="../charts/charts.html">CHARTS</a> option.</b><br>Click <a href="../index.html">HERE</a> for the homepage.';
   css_class_add(warn_div, [css_class_fixed, "green"]);
   fragment.appendChild( warn_div );  // announce the charts
 
