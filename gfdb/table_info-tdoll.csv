@@ -298,13 +298,24 @@ id,craft time,class,*,name
 297,,AR,4,M82
 298,,AR,3,Vepr
 299,,SG,3,HSM10
-1001,,HG,1,Noel
-1002,,SG,1,Elphelt
-1003,,HG,1,Kiana
-1004,,RF,1,Raiden Mei
-1005,,RF,1,Bronya
-1006,,HG,1,Theresa
-1007,,AR,1,Murata Himeko
-1008,,SG,1,Seele
-1009,,HG,1,Clear
-1010,,HG,1,Fail
+300,,MG,3,CAR
+301,,SMG,3,MAS-38
+302,,SG,4,Defender
+303,1:35,HG,5,HP-35
+304,2:10,SMG,4,SAF
+305,4:25,RF,4,Tabuk
+306,3:56,AR,5,AK-Alfa
+307,6:26,MG,5,ZB-26
+308,,RF,3,C14
+309,,HG,3,WKp
+310,0:54,HG,4,Rex Zero 1
+311,,SMG,5,Lusa
+312,4:43,RF,5,VSK-94
+313,4:08,AR,5,Steyr ACR
+314,,AR,3,StG-940
+315,,SMG,5,AUG Para
+316,,RF,5,General Liu
+317,,RF,4,Mondragon
+318,,AR,5,VHS
+319,,MG,4,PM1910
+320,,RF,3,GM6 Lynx
