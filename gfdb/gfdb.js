@@ -612,8 +612,8 @@ async function navigate_noadd_history(o) {
   let sec = msec_to_sec(fix_date - break_date);
   let days = ~~(sec/secs_in_day);
   let warn_div = document.createElement('div');
-  warn_div.innerHTML = '<b>Check this new <a href="../charts/charts.html">CHARTS</a> option.</b><br>Click <a href="../index.html">HERE</a> for the homepage.';
-  css_class_add(warn_div, [css_class_fixed, "green"]);
+  warn_div.innerHTML = '<b>Running in <a href="note.html">reduced efficiency</a> mode.</b><br>Click <a href="../index.html">HERE</a> for the homepage.';
+  css_class_add(warn_div, [css_class_fixed/*, "grey"*/]);
   fragment.appendChild( warn_div );  // announce the charts
 
   // BIG TODO: recipes and epoch selectors should take table type(gun/equ), not item type(tdoll/equip/fairy)
