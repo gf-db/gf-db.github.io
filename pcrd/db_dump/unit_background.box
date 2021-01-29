@@ -5,6 +5,7 @@
 │  100201 │ Yui Kusano          │ 500040 │ Landosol - Guildhouse             │ 0.0      │         4 │
 │  100301 │ Rei Shijo           │ 500040 │ Landosol - Guildhouse             │ 0.0      │         3 │
 │  100401 │ Misogi Hodaka       │ 500140 │ Prano Plains                      │ 0.0      │         4 │
+│  100501 │ Matsuri Orihara     │ 500090 │ Landosol - Palace Entrance        │ 0.0      │         4 │
 │  100601 │ Akari Kazemiya      │ 500260 │ Ancient Castle                    │ 0.0      │         4 │
 │  100701 │ Miyako Izumo        │ 500260 │ Ancient Castle                    │ 0.0      │         4 │
 │  100801 │ Yuki Nijimura       │ 500140 │ Prano Plains                      │ 0.0      │         4 │
@@ -33,6 +34,7 @@
 │  103301 │ Mahiru Noto         │ 500150 │ Elizabeth Park                    │ 0.0      │         9 │
 │  103401 │ Yukari Ayase        │ 500070 │ Mercurius Foundation Headquarters │ 0.0      │         4 │
 │  103601 │ Kyoka Hikawa        │ 500140 │ Prano Plains                      │ 0.0      │         1 │
+│  103701 │ Tomo Mikuma         │ 500090 │ Landosol - Palace Entrance        │ 0.0      │         2 │
 │  103801 │ Shiori Kashiwazaki  │ 500150 │ Elizabeth Park                    │ 0.0      │         2 │
 │  104001 │ Aoi Futaba          │ 500180 │ Elven Forest                      │ 0.0      │         2 │
 │  104201 │ Chika Misumi        │ 500010 │ Landosol - Residential District   │ 0.0      │         4 │
@@ -40,6 +42,7 @@
 │  104401 │ Illya Ornstein      │ 500260 │ Ancient Castle                    │ 0.0      │         4 │
 │  104501 │ Kuka Tomi           │ 500140 │ Prano Plains                      │ 0.0      │         4 │
 │  104601 │ Tamaki Miyasaka     │ 500070 │ Mercurius Foundation Headquarters │ 0.0      │         3 │
+│  104701 │ Jun Shirogane       │ 500090 │ Landosol - Palace Entrance        │ 0.0      │         1 │
 │  104801 │ Mifuyu Ogami        │ 500070 │ Mercurius Foundation Headquarters │ 0.0      │         2 │
 │  104901 │ Shizuru Hoshino     │ 500030 │ Landosol - Business District      │ 0.0      │         4 │
 │  105001 │ Misaki Tamaizumi    │ 500080 │ Lucent Academy                    │ 0.0      │         2 │
@@ -54,4 +57,5 @@
 │  105901 │ Kokkoro             │ 500130 │ Esterella Road                    │ 0.0      │         2 │
 │  106001 │ Karyl               │ 500130 │ Esterella Road                    │ 0.0      │         3 │
 │  106801 │ Akira Mosakuji      │ 500030 │ Landosol - Business District      │ 0.0      │         2 │
+│  107101 │ Christina Morgan    │ 500090 │ Landosol - Palace Entrance        │ 0.0      │         2 │
 └─────────┴─────────────────────┴────────┴───────────────────────────────────┴──────────┴───────────┘
