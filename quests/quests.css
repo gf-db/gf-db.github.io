@@ -1,0 +1,35 @@
+table {
+  padding: 0px;
+  border-spacing: 0px;
+  margin: 0px 30px 0px 0px;
+  border-collapse: collapse;
+}
+thead {
+  font-weight: bold;
+}
+td {
+  border: 1px solid #666;
+  padding: 0px 5px 0px 5px;
+}
+.selectable:hover {
+  background-color: #ffff99;
+  cursor: pointer;
+}
+.float_left {
+  float: left;
+}
+.float_right {
+  float: right;
+}
+.bold {
+  font-weight: bold;
+}
+.header_bg {
+  background-color: #ddd;
+}
+.selected_row {
+  background-color: #cfc;
+}
+.selected_cell {
+  font-weight: bold;
+}

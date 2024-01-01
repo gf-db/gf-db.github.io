@@ -1,0 +1,302 @@
+	Item list [refresh period in days]
+kexp
+kdgc
+kskillpoint
+pivot
+algo booster
+kintimacy point
+furniture coin
+widget white
+widget green
+widget blue
+widget purple
+widget orange
+poly low
+poly med
+poly high
+neural kit
+basic search ticket
+adv search ticket
+quartz sand
+fragment
+prefab
+cog
+key
+
+	Free battlepass [28]
+34 kexp
+15 kdgc
+2.5 kskillpoint
+250 keys
+300 furniture coins
+0.250 kintimacy points
+5 algo booster
+5 pivots
+20 widget white
+20 widget green
+20 widget blue
+40 widget purple
+50 neural kits
+2 adv search tickets
+
+	Daily quest rewards [1]
+1 basic search ticket
+3 kdgc
+1.4 kexp
+100 keys
+0.1 kintimacy points
+60 quartz sand
+
+	Weekly quest rewards [7]
+3.6 algo booster
+0.575 kintimacy points
+150 furniture coins
+100 keys
+3 basic search tickets
+5 kdgc
+1 adv search ticket
+300 quartz sand
+
+	Monthly sign-in rewards [365/12]
+35.5 kdgc
+12.5 kexp
+0.45 kskillpoint
+2.2 algo booster
+200 quartz sand
+3 basic search tickets
+2 adv search tickets
+
+	Oasis(maxed) resources [1]
+52.8 kdgc
+1500 prefabs
+19.2 basic search tickets
+800 cogs
+
+	Dorm bonuses (min) [1]
+0.3 kexp
+30 poly low
+
+	Friend point exchange shop [7]
+1 adv search ticket
+3 pivot
+24 kexp
+
+	Vulnerability check [1]
+270/50 fragments
+16.6 kdgc
+
+	Exception protocol [14]
+1200 quartz sand
+50 fragment
+
+	Natural key regen [1/24]
+12 keys
+
+---
+
+	Standard acquisition : exp [1]
+ddc=1
+3.875 kexp
+-3.875 kdgc
+
+	Standard acquisition : intimacy [1]
+ddc=0
+0.197 kintimacy points
+-9.85 kdgc
+
+	Standard acquisition : al.boost [1]
+ddc=0
+0.74 algo booster
+-6.475 kdgc
+
+	Standard acquisition : w.blue [1]
+ddc=1
+1.25 widget blue
+-1.094 kdgc
+
+	Standard acquisition : w.purple [1]
+ddc=1
+2.55 widget purple
+-3.188 kdgc
+
+	Standard acquisition : w.orange [1]
+ddc=1
+4.2 widget orange
+-10.5 kdgc
+
+	Standard acquisition : skillpoint [1]
+ddc=1
+0.55 kskillpoint
+-11 kdgc
+
+---
+
+	Farming : fragments [1]
+-50 keys
+12.5 fragments
+
+	Farming : exp 2x [7]
+ddc=1
+-3*2*30 keys
+3*2*18 kexp
+
+	Farming : skill 2x [7]
+-3*2*30 keys
+3*2*1.6 kskillpoint
+
+	Farming : dgc 2x [7]
+ddc=0
+-3*2*30 keys
+3*2*18 kdgc
+
+	Farming : algorithms [1]
+REMAINING keys
+
+---
+
+	Extraction Mine - dgc [1]
+group=em
+ddc=0
+14.4 kdgc
+
+	Extraction Mine - poly>ticket [1/24]
+group=em
+ddc=1
+60/72.5 basic search tickets
+
+	Supplies Workshop - exp [1/24]
+group=sw
+ddc=0
+0.6*60/88 kexp
+
+	Supplies Workshop - tickets [1/24]
+group=sw
+ddc=1
+60/72.5 basic search tickets
+
+	Gift Workshop [1]
+0.480 kintimacy points
+
+	Data Enc.Center - pivots [1/3]
+group=dec
+ddc=1.0
+-300 prefab
+1 pivot
+
+	Data Enc.Center - skillboxes [1/12]
+group=dec
+ddc=0.0
+-100 prefab
+-6 kdgc
+16.6/90 kskillpoint
+6/90 pivot
+
+	Cog boost - dgc [1]
+group=cog
+ddc=0
+-800 cog
+14.4 kdgc
+
+	Cog boost - exp [1]
+group=cog
+ddc=0
+-800 cog
+16*0.6*60/88 kexp
+
+	Cog boost - tickets [1]
+group=cog
+ddc=1
+-800 cog
+16*60/72.5 basic search tickets
+
+	Cog boost - intimacy [1]
+group=cog
+ddc=0
+-800 cog
+0.320 kintimacy points
+
+	Cog boost - pivots [1/2]
+group=cog
+ddc=0
+-400 cog
+-300 prefab
+1 pivot
+
+	Cog boost - skillboxes [1/8]
+group=cog
+ddc=0
+-100 cog
+-100 prefab
+-6 kdgc
+0.195 kskillpoint
+3/43 pivot
+
+	Cog boost - algobooster [1/6]
+group=cog
+ddc=1
+-2.5 cog
+-100 prefab
+1 algo booster
+
+---
+
+	Basic ticket draw (est:3570) [7]
+REMAINING basic search tickets
+13.295 widget white
+23.7 widget green
+30.781 widget blue
+45.665 widget purple
+28.035 widget orange
+5.455 kintimacy points
+27.168 poly low
+19.942 poly med
+6.503 poly high
+102.718 kexp
+44.22 fragments
+183.961 neural kits
+
+!	EP-fit (lv.40, sl.5, i.6, 3*)
+23.25 kexp
+2.44 kskillpoint
+0 pivot
+10+10 widget white
+15+15 widget green
+20 widget blue
+0 widget purple
+0 widget orange
+-10 widget white
+-10 widget green
+-0 widget blue
+-0 widget purple
+7.5 kdgc
+5+10+25+40-15 fragment
+0 kdgc
+0.95 kintimacy points
+7.5 algo booster
+
+!	Reasonable max (lv.60)
+213.54 kexp
+23.24 kskillpoint
+48 pivot
+20 widget white
+30 widget green
+35 widget blue
+45 widget purple
+30 widget orange
+-10 widget white
+-10 widget green
+-5 widget blue
+-5 widget purple
+46 kdgc
+385 fragment
+52.5 kdgc
+13.570 kintimacy points
+69 algo booster
+
+!	Full max (lv.70)
+include=Reasonable max (lv.60)
+105 widget orange
+210 kdgc
+25 widget orange
+120 kdgc
+600 kexp
