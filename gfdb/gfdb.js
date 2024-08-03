@@ -21,6 +21,7 @@ const css_class_past = 'red_bg';
 const css_class_present = 'green_bg';
 const css_class_future = 'blue_bg';
 const css_class_recipelist = 'recipelist';
+const css_class_whitespace_nowrap = 'whitespace_nowrap';
 
 const tdoll_class_list = ['HG', 'SMG', 'AR', 'RF', 'MG', 'SG'];
 const equip_class_list = ['opt', 'holo', 'rds', 'nv', 'ap', 'hv', 't-exo', 'armor', 'x-exo', 'supp', 'box', 'hp', 'buck', 'slug', 'cape', 'aux', 'chip', 'mg-ap', 'choke', 'lrf', 'bipod'];
@@ -392,6 +393,9 @@ function create_list_table(a, data_type, show_item_class, o) {
     document.getElementsByTagName('body')[0].appendChild(style);
   }
   css_class_add(tbl, table_class);
+  if (show_item_class) {  // apply nowrap only to the tdoll table
+    css_class_add(tbl, css_class_whitespace_nowrap);
+  }
 
   let max_visible_rows = create_array(rarity_list.length, a.class_list.length, 0);
   for (let r = 0; r < rarity_list.length; r++) {  // loop over single-rarity blocks

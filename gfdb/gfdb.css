@@ -9,7 +9,6 @@ table {
   border-collapse: collapse;
 
   border: 4px solid #666;
-
 }
 thead {
   font-weight: bold;
@@ -23,7 +22,9 @@ body {
    otherwise internal content jumps when scrollbar appears */
   overflow-y: scroll;
 }
-
+.whitespace_nowrap {
+  white-space: nowrap;
+}
 .recipelist td {
 
   width: 11.111%;
