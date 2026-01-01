@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>PNC resource calculator</title>
+  <link rel="stylesheet" type="text/css" href="income_calc.css">
+  <script type="text/javascript" src="income_calc.js"></script>
+</head>
+
+<body onload='init()' onunload='deinit()'>
+<div class="table"><div class="tr">
+  <div class='td' id='main_list'></div>
+</div></div>
+
+<!--
+Main takeaways:
+- Basic tickets rule and will be your main source of approximately everything.
+- You will drown in dogecoins until there are better sinks available.
+- Doll power is timegated by fragments and algorithms.
+- Only dorks read html comments.
+-->
+
+<a href="#" onclick="const x=['none','block']; document.getElementById('toggle_notes').style.display = x[(x.indexOf(document.getElementById('toggle_notes').style.display)+1)%2];">Notes</a><!-- (click to open/close).-->
+<p id='toggle_notes' style='display:none;'>
+Weight setting and some other things currently don't work.<br>
+XP, DGC, Skill points and Intimacy are measured in thousands.<br>
+Content drops of basic tickets/skill boxes are my own pull averages and
+this estimate will change and be updated over time as I obtain more data.<br>
+<!--You may adjust default farming/crafting choices and <strike>ruin</strike> improve your results.<br-->
+Fragment part of the calculation only works as an average over everyone.
+It is very deceptive and worse than it looks for raising specific dolls<br>
+because vulnerability check store has limited selection and basic ticket
+fragment drops are entirely random and spread over 40+ candidates.<br>
+The Cluck needs 5625 neural kits to max star (no fragment farm option), better start saving now.<br>
+TODO: algobooster fragment reprocessing.<br>
+<br>
+Errors? Inaccuracies? Message me in-game... wait, you can't.
+</p>
+
+</body>
+
+</html>
